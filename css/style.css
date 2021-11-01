@@ -142,27 +142,7 @@ header .header--content {
   justify-content: center;
   align-items: center;
 }
-header .header--content .header--image {
-  height: 200px;
-  width: 250px;
-  background: black;
-  margin-bottom: 2rem;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  transition: 1s ease-in-out;
-}
-header .header--content .header--image:hover {
-  border-radius: 1rem;
-}
-header .header--content .header--image img {
-  height: 250px;
-  width: 250px;
-  object-fit: cover;
-  transition: 0.8s ease-in-out;
-}
-header .header--content .header--image img:hover {
-  transform: scale(1.1);
-}
+
 header .header--content .header--text--intro {
   height: 100vh;
   /* background: chartreuse; */
@@ -181,6 +161,7 @@ header .header--content .header--text--intro .header--name {
 header .header--content .header--text--intro .header--sub--intro {
   font-size: 25px;
   color: var(--themeOrange);
+  margin-bottom: 0;
 }
 
 header .arrow--down i {
@@ -311,5 +292,11 @@ header .arrow--down i:hover {
   header .header--content .header--text--intro h1.header--name {
     font-size: 45px;
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  header .navigation--area .nav--link--area {
+    width: 80%;
   }
 }
