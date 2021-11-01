@@ -201,40 +201,10 @@ header .arrow--down i:hover {
 
 /* SECTION--1 START */
 
-section.section {
-  margin-top: 5rem;
-}
-
-section .section--container {
-  margin-top: 10rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-section#section--1 .about--me p.section--intro--para {
-  font-size: 20px;
-  font-family: var(--roboto);
-  color: #494949;
-  line-height: 2rem;
-  text-align: justify;
-  padding: 2rem;
-  background: whitesmoke;
-  border-radius: 1rem;
-  margin-left: 2rem;
-}
-
-section#section--1 .about--me .section--container .about--me--image img {
-  width: 50vh;
-  height: 50vh;
-  object-fit: cover;
-  object-position: top;
-  border-radius: 1rem;
-}
-
 /* SECTION--1 END */
 
 /* RESPONSIVE DESING */
+
 /* TABLET SCREEN */
 @media only screen and (max-width: 800px) {
   /* SECTION--1 RESPONSIVE */
@@ -249,6 +219,15 @@ section#section--1 .about--me .section--container .about--me--image img {
 /* MOBILE SCREEN */
 @media only screen and (max-width: 500px) {
   /* RESPNSIVE NAVGATION */
+  header nav.overlay-nav::after {
+    content: "";
+    background: #00000056;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -3;
+    transition: 0.5s ease-in-out;
+  }
   header .navigation--area .nav--links ul li {
     margin: 0 !important;
     margin: 3rem 0rem !important;
@@ -265,7 +244,7 @@ section#section--1 .about--me .section--container .about--me--image img {
   header .navigation--area .nav--link--area {
     background: var(--white);
     position: absolute;
-    height: 100vh;
+    height: 90vh;
     width: 70%;
     top: 100%;
     border-right: 2px solid var(--github);
@@ -277,9 +256,11 @@ section#section--1 .about--me .section--container .about--me--image img {
     z-index: -1;
     transition: 1s cubic-bezier(0.42, 0, 0, 1.11);
   }
+
   header .navigation--area .nav--link--area.show {
     left: 0;
   }
+
   header .navigation--area .nav--link--area .social--links {
     margin: 2rem;
   }
@@ -290,7 +271,8 @@ section#section--1 .about--me .section--container .about--me--image img {
     height: 0.2rem;
     width: 30px;
     margin: 0.3rem;
-    background: #494949;
+    border-radius: 2px;
+    background: var(--github);
   }
 
   /* RESPONSIVE HEADER SECTION */
