@@ -264,6 +264,38 @@ header .arrow--down i:hover {
   header .navigation--area .nav--link--area .social--links {
     margin: 2rem;
   }
+  header .navigation--area .nav--link--area .social--links .social--icon {
+    font-size: 0px;
+    opacity: 0;
+  }
+
+  header
+    .navigation--area
+    .nav--link--area
+    .social--links
+    #twitter.social--icon--animate {
+    font-size: 20px;
+    opacity: 1;
+    transition: 0.4s cubic-bezier(0.69, 0.18, 0.15, 1.54) 0.4s;
+  }
+  header
+    .navigation--area
+    .nav--link--area
+    .social--links
+    #github.social--icon--animate {
+    font-size: 20px;
+    opacity: 1;
+    transition: 0.4s cubic-bezier(0.69, 0.18, 0.15, 1.54) 0.6s;
+  }
+  header
+    .navigation--area
+    .nav--link--area
+    .social--links
+    #linkedin.social--icon--animate {
+    font-size: 20px;
+    opacity: 1;
+    transition: 0.4s cubic-bezier(0.69, 0.18, 0.15, 1.54) 0.8s;
+  }
   header .navigation--area .toggle--bars {
     display: initial;
   }
