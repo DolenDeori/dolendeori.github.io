@@ -1,13 +1,15 @@
 "use strict";
 
 const linkArea = document.querySelector(".nav--link--area");
-const overlay = document.querySelector(".over-lay");
 const toggleBtn = document.querySelector(".toggle--bars");
+const nav = document.querySelector("nav");
+const smallNav = document.querySelector(".navigation--area");
 
 window.addEventListener("load", function () {
   // NAVIGATION TOGGLE
   toggleBtn.addEventListener("click", () => {
     linkArea.classList.toggle("show");
-    overlay.classList.toggle("show--overlay");
+    nav.classList.toggle("reset");
+    smallNav.classList.toggle("reset--small");
   });
 });
