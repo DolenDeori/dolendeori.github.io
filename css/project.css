@@ -1,70 +1,23 @@
 @import url("./global/_global.css");
-
+@import url("./global/_responsive.css");
 @import url("./global/_navigation.css");
-
-/* HEADER AREA STYLING START */
-
-/* HEADER CONTENT STYLING */
-header .header--content {
+header {
   height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-header .header--content .header--text--intro {
+header .animation {
   height: 100vh;
-  /* background: chartreuse; */
-  font-family: var(--roboto);
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-header .header--content .header--text--intro .header--name {
-  font-size: 70px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-header .header--content .header--text--intro .header--sub--intro {
-  font-size: 25px;
-  color: var(--themeOrange);
-  margin-bottom: 0;
+
+header .animation h1 {
+  font-family: var(--roboto);
 }
 
-header .arrow--down i {
-  cursor: pointer;
-  position: absolute;
-  left: 50%;
-  bottom: 5%;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  transition: 0.2s ease-in-out;
-}
-header .arrow--down i:hover {
-  background: #ffecdb;
-  color: var(--themeOrange);
-  transform: scale(1.06);
-}
-/* HEADER AREA STYLING END */
-
-/* SECTION--1 START */
-
-/* SECTION--1 END */
-
-/* RESPONSIVE DESING */
 /* TABLET SCREEN */
-@media only screen and (max-width: 800px) {
-  /* SECTION--1 RESPONSIVE */
-  section .section--container {
-    flex-wrap: wrap;
-  }
-  section#section--1 .about--me p.section--intro--para {
-    margin: 2rem 0rem;
-  }
-}
 
 /* MOBILE SCREEN */
 @media only screen and (max-width: 500px) {
@@ -155,12 +108,6 @@ header .arrow--down i:hover {
     margin: 0.3rem;
     border-radius: 2px;
     background: var(--github);
-  }
-
-  /* RESPONSIVE HEADER SECTION */
-  header .header--content .header--text--intro h1.header--name {
-    font-size: 45px;
-    text-align: center;
   }
 }
 

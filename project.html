@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <title>Project • Dolen Deori</title>
     <!-- FONTAWSOME ICON FILE -->
     <link
       rel="stylesheet"
@@ -28,28 +28,27 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-
-    <!-- CUSTOM CSS FILE LINK -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Home • Dolen Deori</title>
+    <!-- LINK CUSTOM CSS FILE -->
+    <link rel="stylesheet" href="./css/project.css" />
   </head>
   <body>
     <div class="main--body">
-      <!-- HEADER AREA START -->
       <header>
         <!-- NAVIGATION AREA START -->
         <nav>
           <div class="navigation--area">
             <div class="nav-logo">
-              <a href="#">Ddeori</a>
+              <a href="index.html">Ddeori</a>
             </div>
             <div class="nav--link--area">
               <div class="nav--links">
                 <ul>
                   <li class="nav-llink">
-                    <a class="activate" href="#">Home</a>
+                    <a href="index.html">Home</a>
                   </li>
-                  <li class="nav-llink"><a href="project.html">Projects</a></li>
+                  <li class="nav-llink">
+                    <a class="activate" href="project.html">Projects</a>
+                  </li>
                   <li class="nav-llink"><a href="#">Resume</a></li>
                 </ul>
               </div>
@@ -81,23 +80,21 @@
           </div>
         </nav>
         <!-- NAVIGATION AREA END -->
-        <div class="container">
-          <div class="header--content">
-            <div class="header--text--intro">
-              <h1 class="header--name">DOLEN CH. DEORI</h1>
-              <p class="header--sub--intro">Software Developer</p>
-            </div>
-          </div>
-        </div>
-        <div class="arrow--down">
-          <i class="fas fa-chevron-down"></i>
+        <div class="animation">
+          <lottie-player
+            class="no--project"
+            src="https://assets10.lottiefiles.com/private_files/lf30_j7ezldoy.json"
+            background="transparent"
+            speed="1"
+            style="width: 300px; height: 300px"
+            autoplay
+          ></lottie-player>
+          <h1 class="text-muted">No Projects To Show</h1>
         </div>
       </header>
-      <!-- HEADER AREA END -->
-
-      <!-- MAIN SECTION START -->
-      <!-- MAIN SECTION END -->
     </div>
+    <!-- LOTTIE ANIMATIONS -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
     <!-- BOOTSTRAP JS FILE CDN -->
     <script
@@ -106,7 +103,24 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- CUSTOM JS FILE -->
-    <script src="./js/index.js"></script>
+    <script>
+      "use strict";
+
+      const linkArea = document.querySelector(".nav--link--area");
+      const toggleBtn = document.querySelector(".toggle--bars");
+      const nav = document.querySelector("nav");
+      const socialIcon = document.querySelectorAll(".social--icon");
+
+      window.addEventListener("load", function () {
+        // NAVIGATION TOGGLE
+        toggleBtn.addEventListener("click", () => {
+          linkArea.classList.toggle("show");
+          nav.classList.toggle("overlay-nav");
+          for (let icon of socialIcon) {
+            icon.classList.toggle("social--icon--animate");
+          }
+        });
+      });
+    </script>
   </body>
 </html>

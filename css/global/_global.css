@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* GLOBAL STYLING */
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 1vw;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--themeOrange);
+  border-radius: 50vw;
+  border: 0.2vw solid var(--white);
+}
+
+/* CSS VARIABLES */
+:root {
+  /* FONT FAMILY */
+  --roboto: "Roboto", sans-serif;
+
+  /* COLOR */
+  --white: #fff;
+  --black: #000;
+  --twitter: #1da1f2;
+  --github: #333;
+  --linkedin: #0e76a8;
+  --themeOrange: #fa792e;
+}
