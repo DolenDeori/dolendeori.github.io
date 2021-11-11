@@ -161,6 +161,10 @@ header .arrow--down i:hover {
     font-size: 45px;
     text-align: center;
   }
+
+  header .arrow--down i {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 350px) {
