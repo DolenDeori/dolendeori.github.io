@@ -26,6 +26,3 @@ let animation = anime({
   duration: 2000,
 });
 
-arrowDown.addEventListener("mouseover", () => {
-  animation.pause;
-});
