@@ -33,6 +33,34 @@ header .header--content .header--text--intro .header--sub--intro {
   margin-bottom: 0;
 }
 
+header .header--content .header--text--intro .header--btn--gorup {
+  margin-top: 2rem;
+}
+header .header--content .header--text--intro .header--btn--gorup button {
+  padding: 1rem 2rem;
+  margin: 0 1rem;
+  font-weight: bold;
+}
+header .header--content .header--text--intro .header--btn--gorup button:hover {
+  box-shadow: 5px 5px 0px #dbdbdb;
+}
+header
+  .header--content
+  .header--text--intro
+  .header--btn--gorup
+  button.header--btn-1 {
+  background-color: var(--themeOrange);
+  color: var(--white);
+}
+header
+  .header--content
+  .header--text--intro
+  .header--btn--gorup
+  button.header--btn-2 {
+  border: 1px solid var(--themeOrange);
+  color: var(--themeOrange);
+}
+
 header .arrow--down i {
   cursor: pointer;
   position: absolute;
