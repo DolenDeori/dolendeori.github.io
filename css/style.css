@@ -2,7 +2,9 @@
 @import url("./navigation.css");
 
 /* HEADER AREA STYLING START */
-
+/* header {
+  background-image: url("../images/hero_background.jpg");
+} */
 /* HEADER CONTENT STYLING */
 header .header--content {
   height: 100vh;
