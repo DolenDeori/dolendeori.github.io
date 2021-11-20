@@ -9,7 +9,7 @@ const loading_page = document.querySelector(".loading");
 
 window.addEventListener("load", function () {
   // REMOVE LOADING ANIMATION
-  loading_page.classList.toggle("loading--hide");
+  // loading_page.classList.toggle("loading--hide");
 
   // NAVIGATION TOGGLE
   toggleBtn.addEventListener("click", () => {
