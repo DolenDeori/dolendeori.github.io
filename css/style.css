@@ -192,6 +192,14 @@ header .arrow--down i:hover {
     text-align: center;
   }
 
+  header .header--content .header--text--intro .header--btn--gorup {
+    align-content: center;
+  }
+
+  header .header--content .header--text--intro .header--btn--gorup button {
+    margin: 0.5rem 0rem;
+  }
+
   header .arrow--down i {
     display: none;
   }
