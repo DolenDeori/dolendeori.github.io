@@ -1,5 +1,7 @@
 @import url("./global.css");
 @import url("./navigation.css");
+@import url("./loading.css");
+
 header {
   height: 100vh;
 }
