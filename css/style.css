@@ -109,15 +109,6 @@ section .aboutme--section .aboutme .aboutme--para {
   font-size: 20px;
 }
 
-section .aboutme--section .aboutme h1.section--title {
-  position: absolute;
-  top: 10%;
-  left: 0%;
-  font-size: 200px;
-  opacity: 20%;
-  text-align: left;
-  font-weight: bold;
-}
 section .aboutme--section .my--image {
   height: 150px;
   width: 150px;
