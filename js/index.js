@@ -19,4 +19,7 @@ window.addEventListener("load", function () {
   };
   // NAVIGATION TOGGLE
   toggleBtn.addEventListener("click", toggleNav);
+
+  // AOS
+  AOS.init();
 });

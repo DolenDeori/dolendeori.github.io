@@ -18,6 +18,9 @@
       crossorigin="anonymous"
     />
 
+    <!-- AOS  CSS CDN-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- GOOGLE FONT LINK >> ROBOTO -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,7 +53,13 @@
         <!-- NAVIGATION AREA START -->
         <nav>
           <div class="navigation--area">
-            <div class="nav-logo">
+            <div
+              class="nav-logo"
+              class="nav-llink"
+              data-aos="fade-up"
+              data-aos-delay="900"
+              data-aos-duration="500"
+            >
               <a href="index.html"
                 ><img src="./images/nav-logo.png" alt=""
               /></a>
@@ -58,26 +67,48 @@
             <div class="nav--link--area">
               <div class="nav--links">
                 <ul>
-                  <li class="nav-llink">
+                  <li
+                    class="nav-llink"
+                    data-aos="fade-up"
+                    data-aos-delay="1000"
+                    data-aos-duration="500"
+                  >
                     <a class="activate" href="#">Home</a>
                   </li>
-                  <li class="nav-llink"><a href="project.html">Projects</a></li>
-                  <li class="nav-llink"><a href="#">Resume</a></li>
+                  <li
+                    class="nav-llink"
+                    class="nav-llink"
+                    data-aos="fade-up"
+                    data-aos-delay="1200"
+                    data-aos-duration="500"
+                  >
+                    <a href="project.html">Projects</a>
+                  </li>
+
+                  <li
+                    class="nav-llink"
+                    class="nav-llink"
+                    data-aos="fade-up"
+                    data-aos-delay="1300"
+                    data-aos-duration="500"
+                  >
+                    <a href="#">Resume</a>
+                  </li>
                 </ul>
               </div>
               <div class="social--links">
                 <ul>
-                  <li class="nav-social-link">
+                  <li class="nav-social-link" class="nav-llink">
                     <a target="_blank" href="https://twitter.com/chdulen"
                       ><i class="fab fa-twitter social--icon" id="twitter"></i
                     ></a>
                   </li>
-                  <li class="nav-social-link">
+                  <li class="nav-social-link" class="nav-llink">
                     <a target="_blank" href="https://github.com/DolenDeori"
                       ><i class="fab fa-github social--icon" id="github"></i
                     ></a>
                   </li>
-                  <li class="nav-social-link">
+                  <li class="nav-social-link" class="nav-llink">
                     <a
                       target="_blank"
                       href="https://www.linkedin.com/in/dolendeori/"
@@ -98,11 +129,42 @@
         <div class="container">
           <div class="header--content">
             <div class="header--text--intro">
-              <h1 class="header--name">DOLEN CH. DEORI</h1>
-              <p class="header--sub--intro">Software Developer</p>
+              <h1
+                class="header--name"
+                class="nav-llink"
+                data-aos="fade-up"
+                data-aos-delay="1500"
+                data-aos-duration="500"
+              >
+                DOLEN CH. DEORI
+              </h1>
+              <p
+                class="header--sub--intro"
+                class="header--name"
+                class="nav-llink"
+                data-aos="fade-up"
+                data-aos-delay="1600"
+                data-aos-duration="500"
+              >
+                Software Developer
+              </p>
               <div class="header--btn--gorup text-center">
-                <button class="btn header--btn-1">View Resume</button>
-                <button class="btn header--btn-2">View Projects</button>
+                <button
+                  class="btn header--btn-1"
+                  data-aos="zoom-in"
+                  data-aos-delay="1700"
+                  data-aos-duration="500"
+                >
+                  View Resume
+                </button>
+                <button
+                  class="btn header--btn-2"
+                  data-aos="zoom-in"
+                  data-aos-delay="1800"
+                  data-aos-duration="500"
+                >
+                  View Projects
+                </button>
               </div>
             </div>
           </div>
@@ -144,8 +206,10 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- AOS JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- CUSTOM JS FILE -->
-    <script src="./js/anime.min.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
