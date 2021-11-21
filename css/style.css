@@ -242,6 +242,7 @@ section#section--2 {
   section#section--1 .aboutme--section .aboutme .aboutme--para {
     font-size: 15px;
     line-height: 1.6rem;
+    text-align: justify;
   }
 }
 
