@@ -79,7 +79,62 @@ header .arrow--down i:hover {
 
 /* SECTION--1 START */
 
+section#section--1 {
+  height: 100vh;
+  background: var(--themeOrange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+section .aboutme--section,
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section .aboutme--section .aboutme {
+  margin-top: 2rem;
+  font-family: var(--roboto);
+  text-align: center;
+  color: var(--white);
+}
+section .aboutme--section .aboutme .aboutme--para {
+  padding: 0rem 10rem;
+  margin: 1rem 0rem;
+  font-size: 20px;
+}
+
+section .aboutme--section .aboutme h1.section--title {
+  position: absolute;
+  top: 10%;
+  left: 0%;
+  font-size: 200px;
+  opacity: 20%;
+  text-align: left;
+  font-weight: bold;
+}
+section .aboutme--section .my--image {
+  height: 150px;
+  width: 150px;
+  overflow: hidden;
+  border-radius: 100%;
+  z-index: 1;
+  border: 3px solid var(--white);
+}
+section .aboutme--section .my--image img {
+  height: 150px;
+  transform: scale(1.1);
+}
 /* SECTION--1 END */
+section#section--2 {
+  height: 100vh;
+}
+/* SECTION--2 START */
+
+/* SECTION--2 END */
 
 /* RESPONSIVE DESING */
 /* TABLET SCREEN */
