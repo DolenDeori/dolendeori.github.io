@@ -4,7 +4,6 @@ const linkArea = document.querySelector(".nav--link--area");
 const toggleBtn = document.querySelector(".toggle--bars");
 const nav = document.querySelector("nav");
 const socialIcon = document.querySelectorAll(".social--icon");
-const arrowDown = document.querySelector(".arrow--down");
 const loading_page = document.querySelector(".loading");
 
 window.addEventListener("load", function () {
@@ -20,13 +19,4 @@ window.addEventListener("load", function () {
   };
   // NAVIGATION TOGGLE
   toggleBtn.addEventListener("click", toggleNav);
-
-  anime({
-    targets: arrowDown,
-    translateY: ["-20px", "-5px"],
-    opacity: ["1", "0"],
-    easing: "easeInOutQuad",
-    loop: true,
-    duration: 2000,
-  });
 });
