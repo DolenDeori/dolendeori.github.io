@@ -186,7 +186,7 @@ section#section--2 {
   header .navigation--area .nav--link--area {
     background: var(--white);
     position: absolute;
-    height: 100vh;
+    height: 95vh;
     width: 70%;
     top: 100%;
     border-right: 2px solid var(--github);
