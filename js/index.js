@@ -11,14 +11,19 @@ window.addEventListener("load", function () {
   // REMOVE LOADING ANIMATION
   loading_page.classList.toggle("loading--hide");
 
-  // NAVIGATION TOGGLE
-  toggleBtn.addEventListener("click", () => {
+  let overlay;
+  const toggleNav = function () {
     linkArea.classList.toggle("show");
     nav.classList.toggle("overlay-nav");
+    overlay = document.querySelector(".overlay-nav");
     for (let icon of socialIcon) {
       icon.classList.toggle("social--icon--animate");
     }
-  });
+  };
+  // NAVIGATION TOGGLE
+  toggleBtn.addEventListener("click", toggleNav);
+  // console.log(overlay);
+  overlay?.addEventListener("click", toggleNav);
 
   anime({
     targets: arrowDown,

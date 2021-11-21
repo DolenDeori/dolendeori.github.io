@@ -26,6 +26,7 @@ header .header--content .header--text--intro .header--name {
   font-size: 70px;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
 }
 header .header--content .header--text--intro .header--sub--intro {
   font-size: 25px;
@@ -140,14 +141,20 @@ section#section--2 {
 /* TABLET SCREEN */
 @media only screen and (max-width: 800px) {
   /* SECTION--1 RESPONSIVE */
-  section .section--container {
-    flex-wrap: wrap;
+
+  section .aboutme--section .my--image {
+    height: 110px;
+    width: 110px;
   }
-  section#section--1 .about--me p.section--intro--para {
-    margin: 2rem 0rem;
+  section .aboutme--section .my--image img {
+    height: 120px;
+  }
+
+  section .aboutme--section .aboutme .aboutme--para {
+    padding: 0rem 1rem;
+    margin: 0.5rem;
   }
 }
-
 /* MOBILE SCREEN */
 @media only screen and (max-width: 500px) {
   /* RESPNSIVE NAVGATION */
@@ -176,7 +183,7 @@ section#section--2 {
   header .navigation--area .nav--link--area {
     background: var(--white);
     position: absolute;
-    height: 90vh;
+    height: 100vh;
     width: 70%;
     top: 100%;
     border-right: 2px solid var(--github);
@@ -255,6 +262,12 @@ section#section--2 {
 
   header .arrow--down i {
     display: none;
+  }
+
+  /* RESPONSIVE SECTION */
+  section#section--1 .aboutme--section .aboutme .aboutme--para {
+    font-size: 15px;
+    line-height: 1.6rem;
   }
 }
 
