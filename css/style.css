@@ -122,9 +122,10 @@ section .aboutme--section .my--image img {
   transform: scale(1.1);
 }
 
-section .section--elements svg.lines {
+section .section--elements svg {
   stroke: var(--white);
   opacity: 50%;
+  height: 50px;
 }
 
 section .section--elements svg.lines:nth-child(1) {
@@ -275,11 +276,15 @@ section#section--2 {
     text-align: justify;
   }
 
-  section .section--elements svg.lines {
-    opacity: 30%;
+  section .section--elements {
+    opacity: 40%;
+    height: 30px;
   }
   section .section--elements svg.lines:nth-child(1) {
     bottom: 10%;
+  }
+  section .section--elements svg.lines:nth-child(2) {
+    top: 20%;
   }
 }
 
