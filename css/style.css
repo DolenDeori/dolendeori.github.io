@@ -121,11 +121,50 @@ section .aboutme--section .my--image img {
   height: 150px;
   transform: scale(1.1);
 }
+
+section .section--elements svg.lines {
+  stroke: var(--white);
+  opacity: 50%;
+}
+
+section .section--elements svg.lines:nth-child(1) {
+  position: absolute;
+  left: 0%;
+}
+section .section--elements svg.lines:nth-child(2) {
+  position: absolute;
+  right: 0%;
+  top: 30%;
+  transform: rotate(180deg);
+}
+
+section .section--elements svg #lines path:nth-child(1) {
+  stroke-dasharray: 159px;
+  stroke-dashoffset: 159px;
+  animation: line_anim 2s ease forwards 0.3s;
+}
+section .section--elements svg #lines path:nth-child(2) {
+  stroke-dasharray: 159px;
+  stroke-dashoffset: 159px;
+  animation: line_anim 2s ease forwards 0.5s;
+}
+section .section--elements svg #lines path:nth-child(3) {
+  stroke-dasharray: 159px;
+  stroke-dashoffset: 159px;
+  animation: line_anim 2s ease forwards 0.7s;
+}
+
+@keyframes line_anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 /* SECTION--1 END */
+
+/* SECTION--2 START */
 section#section--2 {
   height: 100vh;
 }
-/* SECTION--2 START */
 
 /* SECTION--2 END */
 
@@ -234,6 +273,13 @@ section#section--2 {
     font-size: 15px;
     line-height: 1.6rem;
     text-align: justify;
+  }
+
+  section .section--elements svg.lines {
+    opacity: 30%;
+  }
+  section .section--elements svg.lines:nth-child(1) {
+    bottom: 10%;
   }
 }
 
