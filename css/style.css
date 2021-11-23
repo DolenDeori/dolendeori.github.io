@@ -110,7 +110,6 @@ section .aboutme--section .aboutme .aboutme--para {
   font-weight: lighter;
 }
 
-
 section .aboutme--section .my--image {
   height: 150px;
   width: 150px;
@@ -165,15 +164,6 @@ section .section--elements svg #lines path:nth-child(3) {
 /* SECTION--1 END */
 
 /* SECTION--2 START */
-section#section--2 {
-  height: 100vh;
-  background-color: #5785da;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: var(--roboto);
-  color: white;
-}
 
 /* SECTION--2 END */
 
