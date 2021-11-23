@@ -107,7 +107,9 @@ section .aboutme--section .aboutme .aboutme--para {
   padding: 0rem 10rem;
   margin: 1rem 0rem;
   font-size: 20px;
+  font-weight: lighter;
 }
+
 
 section .aboutme--section .my--image {
   height: 150px;
@@ -115,7 +117,7 @@ section .aboutme--section .my--image {
   overflow: hidden;
   border-radius: 100%;
   z-index: 1;
-  border: 3px solid var(--white);
+  /* border: 3px solid var(--white); */
 }
 section .aboutme--section .my--image img {
   height: 150px;
@@ -165,6 +167,12 @@ section .section--elements svg #lines path:nth-child(3) {
 /* SECTION--2 START */
 section#section--2 {
   height: 100vh;
+  background-color: #5785da;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--roboto);
+  color: white;
 }
 
 /* SECTION--2 END */
