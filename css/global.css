@@ -38,3 +38,9 @@ a {
   --linkedin: #0e76a8;
   --themeOrange: #fa792e;
 }
+
+button:active,
+button:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}

@@ -5,6 +5,9 @@ const toggleBtn = document.querySelector(".toggle--bars");
 const nav = document.querySelector("nav");
 const socialIcon = document.querySelectorAll(".social--icon");
 const loading_page = document.querySelector(".loading");
+const btn_watch = document.querySelector(".section1--video--btn");
+const video_box = document.querySelector(".popup--video video");
+const video_overlay = document.querySelector(".video--overlay");
 
 window.addEventListener("load", function () {
   // REMOVE LOADING ANIMATION
@@ -19,6 +22,18 @@ window.addEventListener("load", function () {
   };
   // NAVIGATION TOGGLE
   toggleBtn.addEventListener("click", toggleNav);
+
+  //INTRO VIDEO
+  btn_watch.addEventListener("click", () => {
+    video_box.classList.remove("hide--video");
+    video_box.classList.add("show--video");
+    video_overlay.classList.toggle("show--overlay");
+  });
+  video_overlay.addEventListener("click", () => {
+    video_box.classList.remove("show--video");
+    video_box.classList.add("hide--video");
+    video_overlay.classList.toggle("show--overlay");
+  });
 
   // AOS
   AOS.init();

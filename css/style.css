@@ -43,7 +43,7 @@ header .header--content .header--text--intro .header--btn--gorup button {
   font-weight: bold;
 }
 header .header--content .header--text--intro .header--btn--gorup button:hover {
-  box-shadow: 5px 5px 0px #dbdbdb;
+  box-shadow: 5px 5px 0px #dbdbdb !important;
 }
 header
   .header--content
@@ -109,18 +109,31 @@ section .aboutme--section .aboutme .aboutme--para {
   font-size: 20px;
   font-weight: lighter;
 }
+section .aboutme--section .aboutme button.section1--video--btn {
+  color: var(--themeOrange);
+  font-weight: bold;
+  /* border: 2px solid var(--white); */
+  margin-top: 2rem;
+  background: var(--white);
+  font-size: 15px;
+  padding: 1rem 2rem;
+  transition: 0.2s ease-in-out;
+}
+section .aboutme--section .aboutme button.section1--video--btn i {
+  margin-left: 1rem;
+  transition: 0.2s ease-in-out;
+}
 
 section .aboutme--section .my--image {
   height: 150px;
   width: 150px;
   overflow: hidden;
   border-radius: 100%;
-  z-index: 1;
+  /* z-index: 1; */
   /* border: 3px solid var(--white); */
 }
 section .aboutme--section .my--image img {
   height: 150px;
-  transform: scale(1.1);
 }
 
 section .section--elements svg {
@@ -161,6 +174,84 @@ section .section--elements svg #lines path:nth-child(3) {
     stroke-dashoffset: 0;
   }
 }
+
+section .aboutme--section .aboutme button.section1--video--btn:hover {
+  box-shadow: 5px 5px 0px #3b3b3b50 !important;
+}
+.section--video {
+  position: fixed;
+}
+.section--video .video--overlay {
+  content: " ";
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.644);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 10;
+}
+.section--video .popup--video video {
+  height: 400px;
+  width: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border-radius: 1rem;
+  border: 2px solid var(--white);
+  transform: scale(0);
+}
+section#section--1 .section--video .video--overlay i.close--video {
+  color: var(--white);
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  font-size: 30px;
+  cursor: pointer;
+  background: #ffffff2f;
+  border: 2px solid #ffffff17;
+  backdrop-filter: blur(2px);
+  padding: 1rem;
+  border-radius: 100%;
+}
+
+.section--video .popup--video video.show--video {
+  animation: popup_video 0.5s ease-in-out forwards;
+}
+.section--video .popup--video video.hide--video {
+  animation: close_btn 0.5s ease-in-out forwards;
+}
+.section--video .video--overlay.show--overlay {
+  display: initial;
+}
+
+@keyframes popup_video {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+@keyframes close_btn {
+  0% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  30% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
 /* SECTION--1 END */
 
 /* SECTION--2 START */
@@ -183,6 +274,16 @@ section .section--elements svg #lines path:nth-child(3) {
   section .aboutme--section .aboutme .aboutme--para {
     padding: 0rem 1rem;
     margin: 0.5rem;
+  }
+
+  section#section--1 .section--video .video--overlay i.close--video {
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+  }
+
+  .section--video .popup--video video {
+    height: 250px;
   }
 }
 /* MOBILE SCREEN */
@@ -284,10 +385,24 @@ section .section--elements svg #lines path:nth-child(3) {
   section .section--elements svg.lines:nth-child(2) {
     top: 20%;
   }
+
+  .section--video .popup--video video {
+    height: 170px;
+  }
 }
 
 @media only screen and (max-width: 350px) {
   header .navigation--area .nav--link--area {
     width: 80%;
+  }
+  /*RESPONSIVE SECTION--1*/
+  section#section--1 {
+    height: 130vh;
+  }
+  section .section--elements svg.lines:nth-child(2) {
+    top: 10%;
+  }
+  .section--video .popup--video video {
+    height: 150px;
   }
 }
