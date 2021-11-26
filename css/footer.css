@@ -102,7 +102,10 @@ footer .footer--right .short--link--area li a {
     margin: 4rem 0rem;
   }
   footer .footer--left {
-    margin-top: 1rem;
+    margin-top: 2rem;
+  }
+  footer .footer--right {
+    margin-bottom: 2rem;
   }
   footer .footer--middle {
     height: 100%;
@@ -114,8 +117,7 @@ footer .footer--right .short--link--area li a {
     float: left;
   }
 
-  .copyright--text {
-    font-family: var(--roboto);
+  footer .copyright--text {
     margin-top: 1rem;
   }
 }
