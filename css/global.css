@@ -29,6 +29,7 @@ a {
 :root {
   /* FONT FAMILY */
   --roboto: "Roboto", sans-serif;
+  --poppins: "Poppins", sans-seri;
 
   /* COLOR */
   --white: #fff;

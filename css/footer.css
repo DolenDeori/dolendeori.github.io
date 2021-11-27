@@ -5,6 +5,7 @@
 h3 {
   background: var(--gradient);
   width: 80%;
+  font-family: var(--poppins);
   -moz-background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

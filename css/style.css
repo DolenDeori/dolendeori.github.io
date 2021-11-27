@@ -59,8 +59,9 @@ header
   .header--text--intro
   .header--btn--gorup
   button.header--btn-2 {
-  border: 1px solid var(--themeOrange);
+  border: 2px solid var(--themeOrange);
   color: var(--themeOrange);
+  background: transparent;
 }
 
 header .arrow--down i {
@@ -256,6 +257,41 @@ section#section--1 .section--video .video--overlay i.close--video {
 /* SECTION--1 END */
 
 /* SECTION--2 START */
+
+section#section--2 {
+  height: 100vh;
+}
+section .skills--section {
+  padding: 3rem 0rem;
+}
+section .skills--section h1 {
+  font-weight: bolder;
+  font-size: 55px;
+  background: linear-gradient(45deg, var(--themeOrange) 0%, #ffae17 100%);
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+section .skills--section h1::before {
+  content: "";
+  background: #dfdfdf;
+  height: 4px;
+  width: 30%;
+  position: absolute;
+  bottom: 0%;
+  border-radius: 40em;
+}
+section .skills--section h1::after {
+  content: "";
+  background: var(--themeOrange);
+  height: 4px;
+  width: 10%;
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  border-radius: 40em;
+}
 
 /* SECTION--2 END */
 

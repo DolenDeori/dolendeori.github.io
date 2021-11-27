@@ -37,4 +37,7 @@ window.addEventListener("load", function () {
 
   // AOS
   AOS.init();
+
+  //RELAX JS
+  let rellax = new Rellax(".rellax");
 });
