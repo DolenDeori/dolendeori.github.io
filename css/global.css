@@ -33,6 +33,7 @@ a {
 
   /* COLOR */
   --white: #fff;
+  --light-gray: #fcfcfc;
   --black: #000;
   --twitter: #1da1f2;
   --github: #333;
@@ -45,3 +46,5 @@ button:focus {
   outline: 0 !important;
   box-shadow: none !important;
 }
+
+
