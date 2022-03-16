@@ -134,8 +134,6 @@ section .aboutme--section .my--image {
   width: 150px;
   overflow: hidden;
   border-radius: 100%;
-  /* z-index: 1; */
-  /* border: 3px solid var(--white); */
 }
 section .aboutme--section .my--image img {
   height: 150px;
@@ -275,6 +273,7 @@ section#section--2 .row .cards {
   z-index: -1;
   height: 40vh;
   font-family: var(--roboto);
+  margin-top: 7rem;
 }
 section#section--2 .row .cards img {
   height: 100%;
@@ -292,6 +291,13 @@ section#section--2 .row .cards .content--box a {
   border: 1px solid var(--github);
   padding: 0.5rem;
   border-radius: 3px;
+}
+section#section--2 .row .cards .content--box a:hover {
+  background: var(--github);
+  color: var(--white);
+}
+section#section--2 .row .cards .content--box a i {
+  padding-left: 1rem;
 }
 /* SECTION--2 END */
 
