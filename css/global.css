@@ -39,6 +39,14 @@ a {
   --github: #333;
   --linkedin: #0e76a8;
   --themeOrange: #fa792e;
+  --instagram: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
 }
 
 button:active,
@@ -46,5 +54,3 @@ button:focus {
   outline: 0 !important;
   box-shadow: none !important;
 }
-
-
