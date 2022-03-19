@@ -25,18 +25,6 @@ window.addEventListener("load", function () {
   // NAVIGATION TOGGLE
   toggleBtn.addEventListener("click", toggleNav);
 
-  //INTRO VIDEO
-  btn_watch.addEventListener("click", () => {
-    video_box.classList.remove("hide--video");
-    video_box.classList.add("show--video");
-    video_overlay.classList.toggle("show--overlay");
-  });
-  video_overlay.addEventListener("click", () => {
-    video_box.classList.remove("show--video");
-    video_box.classList.add("hide--video");
-    video_overlay.classList.toggle("show--overlay");
-  });
-
   // AOS
   AOS.init();
 
