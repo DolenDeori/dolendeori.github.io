@@ -362,13 +362,27 @@
           </div>
           <div class="row">
             <div class="col-lg-8 col-md-6 col-sm-12">
-              <div class="contact-detail">
-                <div class="email-id">
-                  <button type="button" class="btn email" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to copy">
-                    dolendeori@gmail.com
-                  </button>
+              <form class="row g-3">
+                <div class="col-md-6">
+                  <label for="inputEmail4" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="First Name">
                 </div>
-              </div>
+                <div class="col-md-6">
+                  <label for="inputPassword4" class="form-label">Last Name</label>
+                  <input type="password" class="form-control" id="lastName" placeholder="Last Name">
+                </div>
+                <div class="col-md-12">
+                  <label for="inputCity" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="user@gmail.com">
+                </div>
+                <div class="col-md-12">
+                  <label for="exampleFormControlTextarea1" class="form-label">Your Message</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="How may I help you?"></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn send-msg">Send message</button>
+                </div>
+              </form>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
               <div class="social-media-icon">

@@ -9,6 +9,7 @@ const btn_watch = document.querySelector(".section1--video--btn");
 const video_box = document.querySelector(".popup--video video");
 const video_overlay = document.querySelector(".video--overlay");
 const copyBtn = document.querySelector(".email");
+const email = document.querySelector(".email-txt");
 
 window.addEventListener("load", function () {
   // REMOVE LOADING ANIMATION
@@ -44,23 +45,5 @@ window.addEventListener("load", function () {
   );
   let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl);
-  });
-
-  // COPY TEXT
-  function copyTextFun(htmlElement) {
-    if (!htmlElement) {
-      return;
-    }
-    let elementText = htmlElement.innerText;
-    let inputElement = document.createElement("input");
-    inputElement.setAttribute("value", elementText);
-    document.body.appendChild(inputElement);
-    inputElement.select();
-    document.execCommand("copy");
-    inputElement.parentNode.removeChild(inputElement);
-    copyBtn.setAttribute("title", "copied");
-  }
-  copyBtn.addEventListener("click", function () {
-    copyTextFun(copyBtn);
   });
 });
