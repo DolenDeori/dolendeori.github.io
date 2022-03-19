@@ -323,6 +323,7 @@ textarea {
 section#section--last form label {
   font-family: var(--roboto);
   font-weight: bold;
+  color: var(--themeOrange);
 }
 
 section#section--last button.send-msg {
