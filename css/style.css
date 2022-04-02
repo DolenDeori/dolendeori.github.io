@@ -38,22 +38,22 @@ header .header--content .header--text--intro .header--sub--intro {
   margin-bottom: 0;
 }
 
-header .header--content .header--text--intro .header--btn--gorup {
-  margin-top: 2rem;
+header .header--content .header--text--intro .header--btn--gorup a {
+  margin: 2rem 1rem 0rem 0rem;
 }
-header .header--content .header--text--intro .header--btn--gorup button {
+header .header--content .header--text--intro .header--btn--gorup a {
   padding: 1rem 2rem;
-  margin: 0 1rem;
   font-weight: bold;
 }
-header .header--content .header--text--intro .header--btn--gorup button:hover {
+header .header--content .header--text--intro .header--btn--gorup a:hover {
   box-shadow: 5px 5px 0px #dbdbdb !important;
 }
 header
   .header--content
   .header--text--intro
   .header--btn--gorup
-  button.header--btn-1 {
+  a.header--btn-1 {
+  padding: 1rem 2rem;
   background-color: var(--themeOrange);
   color: var(--white);
 }
@@ -61,7 +61,8 @@ header
   .header--content
   .header--text--intro
   .header--btn--gorup
-  button.header--btn-2 {
+  a.header--btn-2 {
+  padding: 1rem 2rem;
   border: 2px solid var(--themeOrange);
   color: var(--themeOrange);
   background: transparent;
