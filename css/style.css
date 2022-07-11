@@ -271,8 +271,6 @@ section#section--2 .section2--heading h1 {
 }
 
 section#section--2 .row .cards {
-  z-index: -1;
-  height: 40vh;
   font-family: var(--roboto);
   margin-top: 4rem;
 }
