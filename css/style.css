@@ -274,7 +274,7 @@ section#section--2 .row .cards {
   z-index: -1;
   height: 40vh;
   font-family: var(--roboto);
-  margin-top: 7rem;
+  margin-top: 4rem;
 }
 section#section--2 .row .cards img {
   height: 100%;
