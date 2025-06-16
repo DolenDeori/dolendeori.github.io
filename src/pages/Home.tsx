@@ -9,14 +9,24 @@ const Home = () => {
     <main>
       <section className="flex justify-center items-center h-[100vh]">
         <div className="w-[100%] md:w-[80%] mx-4 lg:mx-auto font-dmSans ">
-          <motion.p className="flex gap-2 mb-4">
-            <span className="text-purple-500">
+          <motion.p className="flex gap-2 mb-4 items-center">
+            <motion.span
+              className="text-purple-500 origin-bottom"
+              animate={{ rotate: [10, -10, 10, -10, 0] }}
+              transition={{
+                repeat: Infinity,
+                repeatDelay: 2,
+                duration: 1,
+                ease: "easeInOut",
+              }}
+            >
               <HandIcon />
-            </span>
+            </motion.span>
             Hey, I am Dolen Deori
           </motion.p>
           <h1>
-            I Build Saclable Digital Experiences That Deliver Real Impact.
+            I Build Saclable Digital Experiences That Deliver Real Impact
+            <span className="text-purple-600">.</span>
           </h1>
 
           <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-4 lg:gap-8 mt-4 lg:mt-8 ">
