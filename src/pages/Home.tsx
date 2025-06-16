@@ -1,6 +1,8 @@
-import { ArrowUpRight, HandIcon } from "lucide-react";
+import { ArrowUpRight, HandIcon, MailIcon, SparkleIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import CustomButton from "../components/CustomButton";
+import Marquee from "react-fast-marquee";
+import { images } from "../constants";
 
 const Home = () => {
   return (
@@ -13,8 +15,8 @@ const Home = () => {
             </span>
             Hey, I am Dolen Deori
           </motion.p>
-          <h1 className="text-4xl md:text-4xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-t from-purple-800 to-purple-600 lg:w-[60%] md:w-[70%] ">
-            I Build Scalable Digital Experiences That Deliver Real Impact.
+          <h1>
+            I Build Saclable Digital Experiences That Deliver Real Impact.
           </h1>
 
           <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-4 lg:gap-8 mt-4 lg:mt-8 ">
@@ -73,10 +75,64 @@ const Home = () => {
               </a>
             </div>
             <div className="flex flex-1 gap-4 pl-0 lg:pl-8">
-              <CustomButton name="My Work" animation={true} />
-              <CustomButton name="Know me better" animation={true} />
+              <CustomButton name="My Work" bgVarient="secondary" />
+              <CustomButton name="Know me better" bgVarient="primary" />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Marqeee section */}
+      <section className="py-8">
+        <Marquee
+          autoFill={true}
+          gradient={true}
+          gradientColor="#fff"
+          className="-z-1 overflow-hidden opacity-20"
+        >
+          <p className="mx-8 font-bold text-5xl font-dmSans">
+            Software Developer
+          </p>
+          <p className="mx-8 font-bold text-5xl font-dmSans">Shopify</p>
+          <p className="mx-8 font-bold text-5xl font-dmSans">
+            Graphics Designing
+          </p>
+        </Marquee>
+      </section>
+
+      {/* About section */}
+      <section className="text-center my-24 font-dmSans w-[100%] lg:w-[60%] lg:mx-auto flex flex-col justify-center items-center">
+        <div className="relative">
+          <img
+            src={images.code_circle}
+            className="absolute -left-15 -z-1"
+            alt=""
+          />
+          <div className="relative -z-1">
+            <div className=" absolute h-[70%] bottom-0 left-0 bg-linear-to-t from-white 50% to-transparent 100% w-full"></div>
+            <img
+              src={images.dolendeori_image}
+              alt=""
+              className="h-60 rounded-t-[4rem]"
+            />
+          </div>
+        </div>
+        <div className="mt-4">
+          <div className="flex justify-center items-center gap-2 text-purple-600">
+            <SparkleIcon size={20} />
+            <p className="font-semibold uppercase">ABOUT ME</p>
+          </div>
+          <h2 className="mt-4">
+            I'm Dolen Ch. Deori, a Software Developer from India with a strong
+            passion for web technologies. I focus on building clean, responsive,
+            and efficient web and mobile applications that deliver real value.
+          </h2>
+        </div>
+        <div className="flex justify-center items-center gap-2 mt-6">
+          <a href="#" className="p-2.5 border rounded-full">
+            <MailIcon size={20} />
+          </a>
+          <CustomButton name="Get in touch" bgVarient="primary" />
         </div>
       </section>
     </main>

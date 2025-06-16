@@ -5,6 +5,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Dock from "./components/Dock";
 import { HomeIcon, LayoutGridIcon, SendIcon, SmileIcon } from "lucide-react";
+import LocomotiveScroll from "locomotive-scroll";
 
 const items = [
   {
@@ -30,6 +31,8 @@ const items = [
 ];
 
 function App() {
+  const locomotiveScroll = new LocomotiveScroll();
+
   return (
     <>
       <Navigation />

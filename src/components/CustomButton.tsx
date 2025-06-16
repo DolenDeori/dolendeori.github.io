@@ -2,23 +2,34 @@ import { motion } from "motion/react";
 
 interface ButtonProps {
   name: string;
-  bgVarient?: string;
+  bgVarient: "primary" | "secondary";
   textVarient?: string;
-  animation?: boolean;
 }
+
+const setBtnVarient = (bgVarient: string) => {
+  switch (bgVarient) {
+    case "primary":
+      return "bg-radial-[at_50%_90%] from-purple-700 0% to-purple-500 100% text-white";
+
+    default:
+      return "border border-black text-black";
+  }
+};
+
 const CustomButton = ({
   name,
-  bgVarient,
+  bgVarient = "secondary",
   textVarient,
-  animation,
 }: ButtonProps) => {
   return (
     <>
-      {animation && (
-        <motion.button className="px-6 py-2 border border-black cursor-pointer rounded-full">
-          {name}
-        </motion.button>
-      )}
+      <motion.button
+        className={`px-6 py-2 cursor-pointer rounded-full ${setBtnVarient(
+          bgVarient
+        )}`}
+      >
+        {name}
+      </motion.button>
     </>
   );
 };
