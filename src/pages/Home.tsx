@@ -2,7 +2,8 @@ import { ArrowUpRight, HandIcon, MailIcon, SparkleIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import CustomButton from "../components/CustomButton";
 import Marquee from "react-fast-marquee";
-import { images } from "../constants";
+import { images, testimonials } from "../constants";
+import TestimonialCard from "../components/TestimonialCard";
 
 const Home = () => {
   return (
@@ -24,7 +25,7 @@ const Home = () => {
             </motion.span>
             Hey, I am Dolen Deori
           </motion.p>
-          <h1>
+          <h1 className="w-full lg:w-[60%]">
             I Build Saclable Digital Experiences That Deliver Real Impact
             <span className="text-purple-600">.</span>
           </h1>
@@ -85,26 +86,35 @@ const Home = () => {
               </a>
             </div>
             <div className="flex flex-1 gap-4 pl-0 lg:pl-8">
-              <CustomButton name="My Work" bgVarient="secondary" />
-              <CustomButton name="Know me better" bgVarient="primary" />
+              <CustomButton
+                btnLink="/projects"
+                name="My Work"
+                bgVarient="secondary"
+              />
+              <CustomButton
+                btnLink="/contact"
+                name="Contact me"
+                bgVarient="primary"
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* Marqeee section */}
-      <section className="py-8">
+      <section className="py-6">
         <Marquee
           autoFill={true}
           gradient={true}
           gradientColor="#fff"
           className="-z-1 overflow-hidden opacity-20"
         >
-          <p className="mx-8 font-bold text-5xl font-dmSans">
+          <p className="mx-8 font-bold text-6xl font-dmSans">
             Software Developer
           </p>
-          <p className="mx-8 font-bold text-5xl font-dmSans">Shopify</p>
-          <p className="mx-8 font-bold text-5xl font-dmSans">
+          <p className="mx-8 font-bold text-6xl font-dmSans">Web Developer</p>
+          <p className="mx-8 font-bold text-6xl font-dmSans">Shopify</p>
+          <p className="mx-8 font-bold text-6xl font-dmSans">
             Graphics Designing
           </p>
         </Marquee>
@@ -132,17 +142,45 @@ const Home = () => {
             <SparkleIcon size={20} />
             <p className="font-semibold uppercase">ABOUT ME</p>
           </div>
-          <h2 className="mt-4">
+          <h3 className="mt-4">
             I'm Dolen Ch. Deori, a Software Developer from India with a strong
             passion for web technologies. I focus on building clean, responsive,
             and efficient web and mobile applications that deliver real value.
-          </h2>
+          </h3>
         </div>
         <div className="flex justify-center items-center gap-2 mt-6">
-          <a href="#" className="p-2.5 border rounded-full">
-            <MailIcon size={20} />
-          </a>
-          <CustomButton name="Get in touch" bgVarient="primary" />
+          <CustomButton
+            btnLink="mailto:dolendeori@gmail.com"
+            icon={<MailIcon size={20} />}
+          ></CustomButton>
+          <CustomButton
+            btnLink="/contact"
+            name="Get in touch"
+            bgVarient="primary"
+          />
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-8 my-16">
+        <div className="text-center">
+          <p className="flex justify-center items-center text-purple-600 font-semibold font-dmSans gap-2">
+            <span className="">
+              <SparkleIcon size={20} />
+            </span>
+            TESTIMONIALS
+          </p>
+          <h2 className="mt-4">What Others Say</h2>
+        </div>
+
+        <div className="lg:w-[60%] mx-auto">
+          <TestimonialCard
+            name={testimonials[0].name}
+            message={testimonials[0].message}
+            company={testimonials[0].Company}
+            profile={testimonials[0].profile}
+            className="mt-8"
+          />
         </div>
       </section>
     </main>

@@ -1,35 +1,43 @@
-import { motion } from "motion/react";
+import { useNavigate } from "react-router";
 
-interface ButtonProps {
-  name: string;
-  bgVarient: "primary" | "secondary";
-  textVarient?: string;
-}
-
-const setBtnVarient = (bgVarient: string) => {
+// custom function to set differnt style for button
+const setBgVarient = (bgVarient: string) => {
   switch (bgVarient) {
     case "primary":
-      return "bg-radial-[at_50%_90%] from-purple-700 0% to-purple-500 100% text-white";
+      return "bg-radial-[at_50%_80%] from-purple-700 to-purple-500 text-white";
 
     default:
-      return "border border-black text-black";
+      return "border-1";
   }
 };
 
 const CustomButton = ({
   name,
+  btnLink,
   bgVarient = "secondary",
-  textVarient,
-}: ButtonProps) => {
+  icon,
+}: CustomButtonProps) => {
+  const navigation = useNavigate();
+
+  // Function to handle navigation when cliking a button.
+  const handleNavigation = (navLink: string) => {
+    navigation(navLink);
+  };
+
   return (
     <>
-      <motion.button
-        className={`px-6 py-2 cursor-pointer rounded-full ${setBtnVarient(
-          bgVarient
-        )}`}
-      >
-        {name}
-      </motion.button>
+      {icon ? (
+        <a href={`${btnLink}`} className="p-2 rounded-full border-1">
+          {icon}
+        </a>
+      ) : (
+        <button
+          className={`py-2 px-4 ${setBgVarient(bgVarient)} `}
+          onClick={() => handleNavigation(btnLink!)}
+        >
+          <span>{name}</span>
+        </button>
+      )}
     </>
   );
 };
