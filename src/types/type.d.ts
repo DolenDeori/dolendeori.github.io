@@ -4,3 +4,10 @@ interface CustomButtonProps {
   bgVarient?: "primary" | "secondary";
   icon?: React.ReactNode;
 }
+
+interface Testimonial {
+  name: string;
+  company: string;
+  message: string;
+  profile: string;
+}
