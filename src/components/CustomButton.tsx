@@ -27,12 +27,12 @@ const CustomButton = ({
   return (
     <>
       {icon ? (
-        <a href={`${btnLink}`} className="p-2 rounded-full border-1">
+        <a href={`${btnLink}`} className="p-3 rounded-full border-1">
           {icon}
         </a>
       ) : (
         <button
-          className={`py-2 px-4 ${setBgVarient(bgVarient)} `}
+          className={`py-2.5 px-8 ${setBgVarient(bgVarient)} `}
           onClick={() => handleNavigation(btnLink!)}
         >
           <span>{name}</span>
