@@ -16,7 +16,7 @@ const TestimonialCard = ({
   return (
     <>
       <div
-        className={`flex flex-col justify-center items-center text-center ${className}`}
+        className={`flex flex-col justify-center items-center text-center text-lg ${className}`}
       >
         <p>{message}</p>
         <div className="flex gap-4 items-center justify-center mt-8">
@@ -27,7 +27,7 @@ const TestimonialCard = ({
               className="h-15 rounded-full"
             />
           </div>
-          <div className="flex flex-col justify-start">
+          <div className="flex flex-col justify-center items-start">
             <p className="text-lg font-semibold">{name}</p>
             <p className="text-sm">{company}</p>
           </div>
