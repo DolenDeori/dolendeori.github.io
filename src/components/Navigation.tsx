@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "motion/react";
 const Navigation = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
   return (
-    <nav className="w-full p-2 py-2 bg-gradient-to-b from-white 20% to-transparent 100% md:border-b-gray-300 overflow-hidden fixed">
+    <nav className="w-full p-2 py-2 bg-gradient-to-b from-white to-transparent md:border-b-gray-300 overflow-hidden fixed">
       <div className="flex justify-between items-center w-[80%] mx-auto z-10">
         <div>
           <Link to="/">DOLEN.</Link>
