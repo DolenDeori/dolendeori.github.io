@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=DM+Sans:opsz,wght@9..40,100..1000&display=swap");
 
 @import "tailwindcss";
 
 @theme {
   --font-dmSans: "DM Sans", sans-serif;
+  --font-archivo: "Archivo", sans-serif;
 
   /* * Theme Colors */
   --color-purple-500: oklch(62.7% 0.265 303.9);
@@ -26,7 +27,7 @@
   }
 
   h3 {
-    @apply text-4xl font-semibold;
+    @apply text-4xl/tight font-semibold;
   }
 
   button {
