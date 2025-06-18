@@ -36,6 +36,11 @@ function App() {
   return (
     <>
       <Navigation />
+      <Routes>
+        <Route index element={<Home />}></Route>
+        <Route path="/projects" element={<Projects />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+      </Routes>
       <Dock
         items={items}
         panelHeight={68}
@@ -43,11 +48,6 @@ function App() {
         magnification={70}
         className="cursor-pointer"
       />
-      <Routes>
-        <Route index element={<Home />}></Route>
-        <Route path="/projects" element={<Projects />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-      </Routes>
     </>
   );
 }
