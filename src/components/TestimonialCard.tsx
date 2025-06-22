@@ -1,13 +1,5 @@
 import { motion } from "motion/react";
-
-declare interface TestimonialCardProps {
-  message: string;
-  name: string;
-  company: string;
-  profile: string;
-  className: string;
-  isActive?: boolean;
-}
+import type { TestimonialCardProps } from "../types/type";
 
 const TestimonialCard = ({
   message,
@@ -20,7 +12,7 @@ const TestimonialCard = ({
   const radius = 35;
   const stroke = 3;
   const circumference = 2 * Math.PI * radius;
-  
+
   return (
     <>
       <div

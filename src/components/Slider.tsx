@@ -9,10 +9,7 @@ import TestimonialCard from "./TestimonialCard";
 // * Other imports
 import "swiper/css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
-interface TestimonialProps {
-  testimonials: Testimonial[];
-}
+import type { TestimonialProps } from "../types/type";
 
 const Slider = ({ testimonials }: TestimonialProps) => {
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
