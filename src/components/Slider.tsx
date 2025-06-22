@@ -1,63 +1,66 @@
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import { Autoplay, EffectFade } from "swiper/modules";
-import TestimonialCard from "./TestimonialCard";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+// * Importing modules.
 import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+// * Importing components
+import TestimonialCard from "./TestimonialCard";
+
+// * Other imports
+import "swiper/css";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface TestimonialProps {
   testimonials: Testimonial[];
 }
 
 const Slider = ({ testimonials }: TestimonialProps) => {
-  const swiper = useSwiper();
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
 
   return (
-    <div className="-z-1">
-      <div className="flex justify-between items-center cursor-pointer absolute w-full h-full">
-        <button
-          className="p-8 rounded-full bg-neutral-200 w-fit"
-          onClick={() => swiperInstance.slidePrev()}
-        >
-          <span className="text-black">
-            <ChevronLeft />
-          </span>
-        </button>
-        <button
-          className="p-8 rounded-full bg-neutral-200 w-fit"
-          onClick={() => swiperInstance.slideNext()}
-        >
-          <span className="text-black">
-            <ChevronRight />
-          </span>
-        </button>
+    <div className="flex justify-between items-center gap-8">
+      {/* Swiper Previous Button */}
+      <div
+        className="text-white cursor-pointer p-6 bg-purple-600 rounded-full"
+        onClick={() => swiperInstance.slidePrev()}
+      >
+        <ChevronLeft />
       </div>
 
-      <Swiper
-        modules={[Autoplay, EffectFade]}
-        spaceBetween={50}
-        slidesPerView={1}
-        loop={true}
-        autoplay={{ delay: 3000 }}
-        speed={500}
-        className="lg:w-[60%]"
-        onSwiper={setSwiperInstance}
+      {/* Swiper Container */}
+      <div className="lg:w-[60%] -z-1">
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={50}
+          slidesPerView={1}
+          loop={true}
+          autoplay={{ delay: 6000 }} // 6sec delay
+          speed={500}
+          onSwiper={setSwiperInstance}
+        >
+          <div>
+            {testimonials.map((item, i) => (
+              <SwiperSlide key={i}>
+                <TestimonialCard
+                  name={item.name}
+                  message={item.message}
+                  company={item.company}
+                  profile={item.profile}
+                  className="mt-8"
+                />
+              </SwiperSlide>
+            ))}
+          </div>
+        </Swiper>
+      </div>
+
+      {/* Swiper Next Button */}
+      <div
+        className="text-white cursor-pointer p-6 bg-purple-600 rounded-full"
+        onClick={() => swiperInstance.slideNext()}
       >
-        {testimonials.map((item, i) => (
-          <SwiperSlide key={i}>
-            <TestimonialCard
-              name={item.name}
-              message={item.message}
-              company={item.company}
-              profile={item.profile}
-              className="mt-8"
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        <ChevronRight />
+      </div>
     </div>
   );
 };
