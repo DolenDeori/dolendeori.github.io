@@ -1,12 +1,12 @@
+// * Importing Modules.
 import {
   motion,
   MotionValue,
   useMotionValue,
   useSpring,
   useTransform,
-  type SpringOptions,
   AnimatePresence,
-} from "framer-motion";
+} from "motion/react";
 
 import React, {
   Children,
@@ -17,56 +17,26 @@ import React, {
   useState,
 } from "react";
 
-export type DockItemData = {
-  icon: React.ReactNode;
-  label: React.ReactNode;
-  onClick: () => void;
-  className?: string;
-};
+import { useNavigate } from "react-router";
 
-export type DockProps = {
-  items: DockItemData[];
-  className?: string;
-  distance?: number;
-  panelHeight?: number;
-  baseItemSize?: number;
-  dockHeight?: number;
-  magnification?: number;
-  spring?: SpringOptions;
-};
+import type {
+  DockIconProps,
+  DockItemProps,
+  DockLabelProps,
+  DockProps,
+} from "../types/type";
 
-type DockItemProps = {
-  className?: string;
-  children: React.ReactNode;
-  onClick?: () => void;
-  mouseX: MotionValue;
-  spring: SpringOptions;
-  distance: number;
-  baseItemSize: number;
-  magnification: number;
-};
-
-type DockIconProps = {
-  className?: string;
-  children: React.ReactNode;
-};
-
-type DockLabelProps = {
-  className?: string;
-  children: React.ReactNode;
-};
-
-// Helper function
 function DockItem({
   children,
   className = "",
-  onClick,
+  link,
   mouseX,
   spring,
   distance,
   magnification,
   baseItemSize,
 }: DockItemProps) {
+  const navigate = useNavigate();
   const ref = useRef<HTMLDivElement>(null);
   const isHovered = useMotionValue(0);
 
@@ -75,7 +45,7 @@ function DockItem({
       x: 0,
       width: baseItemSize,
     };
-    return val - rect.x - baseItemSize / 2;
+    return (val as number) - rect.x - baseItemSize / 2;
   });
 
   const targetSize = useTransform(
@@ -83,6 +53,7 @@ function DockItem({
     [-distance, 0, distance],
     [baseItemSize, magnification, baseItemSize]
   );
+
   const size = useSpring(targetSize, spring);
 
   return (
@@ -96,7 +67,9 @@ function DockItem({
       onHoverEnd={() => isHovered.set(0)}
       onFocus={() => isHovered.set(1)}
       onBlur={() => isHovered.set(0)}
-      onClick={onClick}
+      onClick={() => {
+        navigate(link);
+      }}
       className={`relative inline-flex items-center justify-center rounded-2xl border-[0.5px] border-neutral-300/100 bg-gray-100 ${className}`}
       tabIndex={0}
       role="button"
@@ -147,7 +120,6 @@ function DockIcon({ children, className = "" }: DockIconProps) {
   );
 }
 
-// This is the function for the main dock element
 export default function Dock({
   items,
   className = "",
@@ -190,7 +162,7 @@ export default function Dock({
         {items.map((item, index) => (
           <DockItem
             key={index}
-            onClick={item.onClick}
+            link={item.link}
             className={item.className}
             mouseX={mouseX}
             spring={spring}
