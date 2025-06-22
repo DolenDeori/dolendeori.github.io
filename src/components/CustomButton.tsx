@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router";
+import type { CustomButtonProps } from "../types/type";
 
 // custom function to set differnt style for button
 const setBgVarient = (bgVarient: string) => {

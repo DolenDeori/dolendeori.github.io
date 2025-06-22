@@ -7,9 +7,8 @@
   --font-archivo: "Archivo", sans-serif;
 
   /* * Theme Colors */
-  --color-purple-500: oklch(62.7% 0.265 303.9);
-  --color-purple-600: oklch(55.8% 0.288 302.321);
-  --color-purple-700: oklch(49.6% 0.265 301.924);
+  --color-primary: oklch(55.8% 0.288 302.321);
+  --color-primary-dark: oklch(49.6% 0.265 301.924);
   --color-dark: oklch(14.7% 0.004 49.25);
   --color-white: #ffffff;
 }
@@ -32,5 +31,9 @@
 
   button {
     @apply cursor-pointer rounded-full;
+  }
+
+  section {
+    @apply lg:w-[80%] lg:mx-auto py-8 my-16;
   }
 }
