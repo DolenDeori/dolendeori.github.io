@@ -1,32 +1,38 @@
+// * Importing Modules.
 import { Route, Routes } from "react-router";
+import LocomotiveScroll from "locomotive-scroll";
+
+// * Importing Components.
 import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Dock from "./components/Dock";
+import Footer from "./components/Footer";
+
+// * Other Imports.
 import { HomeIcon, LayoutGridIcon, SendIcon, SmileIcon } from "lucide-react";
-import LocomotiveScroll from "locomotive-scroll";
 
 const items = [
   {
     icon: <HomeIcon size={18} />,
     label: "Home",
-    onClick: () => alert("Home!"),
+    link: "/",
   },
   {
     icon: <SmileIcon size={18} />,
     label: "About",
-    onClick: () => alert("Archive!"),
+    link: "/about",
   },
   {
     icon: <LayoutGridIcon size={18} />,
     label: "Projects",
-    onClick: () => alert("Profile!"),
+    link: "/projects",
   },
   {
     icon: <SendIcon size={18} />,
     label: "Contact",
-    onClick: () => alert("Settings!"),
+    link: "/contact",
   },
 ];
 
@@ -48,6 +54,8 @@ function App() {
         magnification={70}
         className="cursor-pointer"
       />
+      {/* Footer Area */}
+      <Footer />
     </>
   );
 }
