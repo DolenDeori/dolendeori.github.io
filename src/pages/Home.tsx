@@ -1,16 +1,19 @@
-import { ArrowUpRight, HandIcon, MailIcon, SparkleIcon } from "lucide-react";
+// * Importing Modules.
 import { motion } from "framer-motion";
-import CustomButton from "../components/CustomButton";
 import Marquee from "react-fast-marquee";
-import { images, projects, services, skills, testimonials } from "../constants";
-import TestimonialCard from "../components/TestimonialCard";
-import Footer from "../components/Footer";
+
+// * Importing Components
+import CustomButton from "../components/CustomButton";
 import Slider from "../components/Slider";
+
+// * Other Imports.
+import { ArrowUpRight, HandIcon, MailIcon, SparkleIcon } from "lucide-react";
+import { images, projects, services, skills, testimonials } from "../constants";
 
 const Home = () => {
   return (
     <main>
-      <section className="flex justify-center items-center h-[100vh]">
+      <section className="flex justify-center items-center h-[100vh] py-0 my-0 lg:w-[100%]">
         <div className="w-[100%] md:w-[80%] mx-4 lg:mx-auto font-dmSans ">
           <motion.p className="flex gap-2 mb-4 items-center">
             <motion.span
@@ -104,7 +107,7 @@ const Home = () => {
       </section>
 
       {/* Marqeee section */}
-      <section className="py-6">
+      <section className="w-[100%]">
         <Marquee
           autoFill={true}
           gradient={true}
@@ -123,18 +126,13 @@ const Home = () => {
       </section>
 
       {/* About section */}
-      <section className="text-center my-24 font-dmSans w-[100%] lg:w-[70%] lg:mx-auto flex flex-col justify-center items-center">
+      <section className="text-center flex flex-col justify-center items-center">
         <div className="relative">
-          <img
-            src={images.code_circle}
-            className="absolute -left-15 -z-1"
-            alt=""
-          />
           <div className="relative -z-1">
             <div className=" absolute h-[70%] bottom-0 left-0 bg-linear-to-t from-white 50% to-transparent 100% w-full"></div>
             <img
               src={images.dolendeori_image}
-              alt=""
+              alt={`Dolen Deori image`}
               className="h-60 rounded-t-[4rem]"
             />
           </div>
@@ -146,7 +144,7 @@ const Home = () => {
               ABOUT ME
             </p>
           </div>
-          <h3 className="mt-4 font-archivo">
+          <h3 className="mt-4">
             I'm Dolen Ch. Deori, a Software Developer from India with a strong
             passion for web technologies. I focus on building clean, responsive,
             and efficient web and mobile applications that deliver real value.
@@ -166,9 +164,9 @@ const Home = () => {
       </section>
 
       {/* Prjects Section  */}
-      <section className="py-8 px-8 lg:w-[80%] lg:mx-auto">
+      <section>
         <div>
-          <p className="flex items-center gap-2 text-purple-600 font-archivo font-medium text-lg">
+          <p className="flex items-center gap-2 text-primary font-archivo font-medium text-lg">
             <span>
               <SparkleIcon />
             </span>
@@ -180,20 +178,20 @@ const Home = () => {
         <div className="grid grid-cols-2 gap-8 mt-8">
           {projects.map((items, i) => (
             <div key={i}>
-              <div className="py-12 bg-orange-200 flex justify-center items-center rounded-4xl">
+              <div className="py-12 bg-neutral-100 flex justify-center items-center rounded-3xl">
                 <img
                   src={items.banner}
-                  className="h-120 rounded-2xl"
+                  className="h-80 rounded-2xl"
                   alt={`${items.title} banner image by Dolen Deori`}
                 />
               </div>
               <div className="flex justify-between items-end mt-2">
                 <div>
                   <p className="text-lg font-semibold">{items.title}</p>
-                  <p className="text-black/70">{items.type}</p>
+                  <p className="text-dark/70">{items.type}</p>
                 </div>
                 <div>
-                  <p className="text-sm text-black/70">{items.date}</p>
+                  <p className="text-sm text-dark/70">{items.date}</p>
                 </div>
               </div>
             </div>
@@ -201,12 +199,12 @@ const Home = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <CustomButton name="View More" />
+          <CustomButton name="View All Projects" />
         </div>
       </section>
 
       {/* services section */}
-      <section className="py-8 my-16 lg:w-[80%] lg:mx-auto">
+      <section>
         <div>
           <p className="flex justify-start items-center text-purple-600 font-archivo font-medium gap-2">
             <span>
@@ -254,7 +252,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-8 my-16">
+      <section>
         <div className="text-center">
           <p className="flex justify-center items-center text-purple-600 font-archivo font-medium text-lg gap-2">
             <span className="">
@@ -265,13 +263,13 @@ const Home = () => {
           <h2 className="mt-2">What Others Say</h2>
         </div>
 
-        <div className="lg:w-[80%] mx-auto relative">
+        <div className="mt-4">
           <Slider testimonials={testimonials} />
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="lg:w-[80%] lg:mx-auto mt-8 mb-6">
+      <section className="my-0 pb-4">
         <div className="bg-neutral-200 p-8 rounded-3xl">
           <div className="bg-green-300 p-1.5 px-4 w-fit rounded-full flex justify-center items-center gap-3">
             <div className="h-1.5 w-1.5 bg-green-950 rounded-full"></div>
@@ -299,7 +297,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </main>
   );
 };
