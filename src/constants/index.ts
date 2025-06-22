@@ -1,7 +1,9 @@
+// * Importing Image Assets
 import dolendeori_image from "../assets/images/dolendeori_image.webp";
 import code_circle from "../assets/images/CodeCircle.png";
 import digixal_project_banner from "../assets/images/Digixal_logo_project.webp";
 
+// * Importing Icons Assets
 import react from "../assets/icons/reactjs-icon.svg";
 import next from "../assets/icons/Nextjs.svg";
 import github from "../assets/icons/GitHub.svg";
@@ -65,11 +67,11 @@ export const testimonials = [
 
 export const projects = [
   {
-    title: "DigiXal Logo Design",
+    title: "Brilliant Academy.",
     banner: images.digixal_project_banner,
-    techUsed: ["react.js", "node.js", "adobe illustrator"],
+    techUsed: ["react.js", "node.js", "django", "python", "javaScript"],
     date: "20-07-2003",
-    type: "Graphics Designing",
+    type: "Full Stack Development",
   },
   {
     title: "DigiXal Logo Design",
