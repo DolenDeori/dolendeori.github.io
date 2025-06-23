@@ -17,7 +17,7 @@ import React, {
   useState,
 } from "react";
 
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 
 import type {
   DockIconProps,
@@ -37,8 +37,16 @@ function DockItem({
   baseItemSize,
 }: DockItemProps) {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const currentPath = location.pathname;
   const ref = useRef<HTMLDivElement>(null);
   const isHovered = useMotionValue(0);
+
+  useEffect(() => {
+    const currentPath = location.pathname;
+    console.log("current path", currentPath);
+  }, [location]);
 
   const mouseDistance = useTransform(mouseX, (val) => {
     const rect = ref.current?.getBoundingClientRect() ?? {
@@ -70,7 +78,11 @@ function DockItem({
       onClick={() => {
         navigate(link);
       }}
-      className={`relative inline-flex items-center justify-center rounded-2xl border-[0.5px] border-neutral-300/100 bg-gray-100 ${className}`}
+      className={`relative inline-flex items-center justify-center rounded-2xl border-[1px] ${
+        link === currentPath
+          ? "border-primary/70 text-primary"
+          : "border-neutral-300 text-dark"
+      } bg-gray-100 ${className}`}
       tabIndex={0}
       role="button"
       aria-haspopup="true"
