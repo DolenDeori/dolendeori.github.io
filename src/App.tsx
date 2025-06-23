@@ -14,7 +14,7 @@ import Footer from "./components/Footer";
 import { dockItems } from "./constants";
 
 function App() {
-  const locomotiveScroll = new LocomotiveScroll();
+  new LocomotiveScroll(); // * using locmotive scroll for smooth scrolling
 
   return (
     <>
@@ -22,6 +22,7 @@ function App() {
       <Routes>
         <Route index element={<Home />}></Route>
         <Route path="/projects" element={<Projects />}></Route>
+        <Route path="/about" element={<Projects />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
       </Routes>
       <Dock
@@ -31,7 +32,6 @@ function App() {
         magnification={70}
         className="cursor-pointer"
       />
-      {/* Footer Area */}
       <Footer />
     </>
   );
