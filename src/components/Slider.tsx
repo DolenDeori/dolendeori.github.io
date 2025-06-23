@@ -15,17 +15,17 @@ const Slider = ({ testimonials }: TestimonialProps) => {
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
 
   return (
-    <div className="flex justify-between items-center gap-8">
+    <div className="flex justify-center lg:justify-between items-center gap-8">
       {/* Swiper Previous Button */}
       <div
-        className="text-white cursor-pointer p-6 bg-purple-600 rounded-full"
+        className="text-white cursor-pointer p-6 bg-purple-600 rounded-full max-md:hidden"
         onClick={() => swiperInstance.slidePrev()}
       >
         <ChevronLeft />
       </div>
 
       {/* Swiper Container */}
-      <div className="lg:w-[60%] -z-1">
+      <div className="w-[80%] lg:w-[60%] -z-1">
         <Swiper
           modules={[Autoplay]}
           spaceBetween={50}
@@ -53,7 +53,7 @@ const Slider = ({ testimonials }: TestimonialProps) => {
 
       {/* Swiper Next Button */}
       <div
-        className="text-white cursor-pointer p-6 bg-purple-600 rounded-full"
+        className="text-white cursor-pointer p-6 bg-purple-600 rounded-full max-md:hidden"
         onClick={() => swiperInstance.slideNext()}
       >
         <ChevronRight />
