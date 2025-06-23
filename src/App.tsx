@@ -11,30 +11,7 @@ import Dock from "./components/Dock";
 import Footer from "./components/Footer";
 
 // * Other Imports.
-import { HomeIcon, LayoutGridIcon, SendIcon, SmileIcon } from "lucide-react";
-
-const items = [
-  {
-    icon: <HomeIcon size={18} />,
-    label: "Home",
-    link: "/",
-  },
-  {
-    icon: <SmileIcon size={18} />,
-    label: "About",
-    link: "/about",
-  },
-  {
-    icon: <LayoutGridIcon size={18} />,
-    label: "Projects",
-    link: "/projects",
-  },
-  {
-    icon: <SendIcon size={18} />,
-    label: "Contact",
-    link: "/contact",
-  },
-];
+import { dockItems } from "./constants";
 
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
@@ -48,7 +25,7 @@ function App() {
         <Route path="/contact" element={<Contact />}></Route>
       </Routes>
       <Dock
-        items={items}
+        items={dockItems}
         panelHeight={68}
         baseItemSize={50}
         magnification={70}

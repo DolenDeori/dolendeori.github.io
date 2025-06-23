@@ -15,6 +15,8 @@ import postman from "../assets/icons/Postman.svg";
 import tailwind from "../assets/icons/Tailwind CSS.svg";
 import figma from "../assets/icons/Figma.svg";
 
+import { HomeIcon, LayoutGridIcon, SendIcon, SmileIcon } from "lucide-react";
+
 export const images = {
   dolendeori_image,
   code_circle,
@@ -33,6 +35,29 @@ export const icons = {
   tailwind,
   figma,
 };
+
+export const dockItems = [
+  {
+    icon: HomeIcon,
+    label: "Home",
+    link: "/",
+  },
+  {
+    icon: SmileIcon,
+    label: "About",
+    link: "/about",
+  },
+  {
+    icon: LayoutGridIcon,
+    label: "Projects",
+    link: "/projects",
+  },
+  {
+    icon: SendIcon,
+    label: "Contact",
+    link: "/contact",
+  },
+];
 
 export const testimonials = [
   {

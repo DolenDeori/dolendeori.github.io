@@ -41,7 +41,7 @@ export type DockLabelProps = {
 
 export type DockIconProps = {
   className?: string;
-  children: React.ReactNode;
+  Icon: React.ElementType;
 };
 
 export type DockItemProps = {
@@ -57,7 +57,7 @@ export type DockItemProps = {
 
 // ? This is the main type definition for dock component.
 type DockItemData = {
-  icon: React.ReactNode;
+  icon: React.ElementType;
   label: React.ReactNode;
   link: string;
   className?: string;

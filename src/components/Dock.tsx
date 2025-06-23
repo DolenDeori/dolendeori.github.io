@@ -112,10 +112,10 @@ function DockLabel({ children, className = "", ...rest }: DockLabelProps) {
   );
 }
 
-function DockIcon({ children, className = "" }: DockIconProps) {
+function DockIcon({ Icon, className = "" }: DockIconProps) {
   return (
     <div className={`flex items-center justify-center ${className}`}>
-      {children}
+      <Icon size={18} />
     </div>
   );
 }
@@ -170,7 +170,7 @@ export default function Dock({
             magnification={magnification}
             baseItemSize={baseItemSize}
           >
-            <DockIcon>{item.icon}</DockIcon>
+            <DockIcon Icon={item.icon} />
             <DockLabel>{item.label}</DockLabel>
           </DockItem>
         ))}
