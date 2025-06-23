@@ -13,7 +13,7 @@ import { images, projects, services, skills, testimonials } from "../constants";
 const Home = () => {
   return (
     <main>
-      <section className="flex justify-center items-center h-[100vh] py-0 my-0 lg:w-[100%]">
+      <section className="flex justify-center items-center h-[100vh] py-0 my-0 lg:w-[100%] bg-white">
         <div className="w-[100%] md:w-[80%] mx-4 lg:mx-auto font-dmSans ">
           <motion.p className="flex gap-2 mb-4 items-center">
             <motion.span
