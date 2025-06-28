@@ -1,25 +1,30 @@
 import { MoonIcon, SunIcon } from "lucide-react";
 import { Link } from "react-router";
-import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { useThemeStore } from "../store/themeStore";
 
 const Navigation = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const { theme, toggleTheme } = useThemeStore();
+  const isDark = theme.theme === "dark";
   return (
-    <nav className="w-full p-2 py-2 bg-gradient-to-b from-white to-transparent md:border-b-gray-300 fixed top-0 left-0">
-      <div className="flex justify-between items-center w-[80%] mx-auto z-10">
+    <nav
+      className={`w-full p-2 py-2 bg-gradient-to-b ${
+        isDark ? "from-primary-dark text-white" : "from-white"
+      } to-transparent md:border-b-gray-300 fixed top-0 left-0 z-10`}
+    >
+      <div className="flex justify-between items-center w-[80%] mx-auto">
         <div>
           <Link to="/">DOLEN.</Link>
         </div>
         <div>
           <div
             onClick={() => {
-              setDarkMode(!darkMode);
+              toggleTheme();
             }}
             className="cursor-pointer text-dark p-3 bg-gray-100/50 rounded-full backdrop-blur-2xl overflow-hidden"
           >
             <AnimatePresence mode="wait">
-              {darkMode ? (
+              {theme.theme === "dark" ? (
                 <motion.span
                   key="moon"
                   className="block"

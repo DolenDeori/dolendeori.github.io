@@ -39,13 +39,12 @@ function DockItem({
   const navigate = useNavigate();
   const location = useLocation();
 
-  const currentPath = location.pathname;
+  const [currentPath, setCurrentPath] = useState<string>("");
   const ref = useRef<HTMLDivElement>(null);
   const isHovered = useMotionValue(0);
 
   useEffect(() => {
-    const currentPath = location.pathname;
-    console.log("current path", currentPath);
+    setCurrentPath(location.pathname);
   }, [location]);
 
   const mouseDistance = useTransform(mouseX, (val) => {
@@ -155,7 +154,7 @@ export default function Dock({
   return (
     <motion.div
       style={{ height, scrollbarWidth: "none" }}
-      className="flex w-full items-center fixed bottom-0 mx-auto"
+      className="flex w-full items-center fixed bottom-0 mx-auto z-10"
     >
       <motion.div
         onMouseMove={({ pageX }) => {
@@ -166,7 +165,7 @@ export default function Dock({
           isHovered.set(0);
           mouseX.set(Infinity);
         }}
-        className={`${className} absolute bottom-2 left-1/2 transform -translate-x-1/2 flex items-end w-fit gap-4 rounded-3xl border-neutral-300/40 shadow-2xl border-2 pb-2 px-2 z-50 backdrop-blur-2xl`}
+        className={`${className} absolute bottom-2 left-1/2 transform -translate-x-1/2 flex items-end w-fit gap-4 rounded-3xl border-neutral-300/40 shadow-2xl border-2 pb-2 px-2 backdrop-blur-2xl`}
         style={{ height: panelHeight }}
         role="toolbar"
         aria-label="Application dock"

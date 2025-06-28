@@ -25,7 +25,7 @@ const Slider = ({ testimonials }: TestimonialProps) => {
       </div>
 
       {/* Swiper Container */}
-      <div className="w-[80%] lg:w-[60%] -z-1">
+      <div className="w-[80%] lg:w-[60%]">
         <Swiper
           modules={[Autoplay]}
           spaceBetween={50}
